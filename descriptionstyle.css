@@ -1,0 +1,153 @@
+body{
+    min-height: 100vh;
+    margin:0;
+    padding:0;
+    font-family:sans-serif;
+    background:linear-gradient(#0384a1,black)
+}
+
+.main-container{
+    display: flex;
+    left:10px;
+    font-family:sans-serif;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    
+}
+
+
+.main-container img{
+    height:510px;
+    width:300px;
+    margin-top: 60px;
+    border-radius: 20px;
+    
+}
+
+
+
+
+.secondary-container{
+    color: rgb(214, 214, 214);
+    margin-top:60px;
+    margin-left: 10px;
+}
+
+.secondary-container i{
+    color: yellow;
+}
+
+.secondary-container h1{
+    position: relative;
+    margin-left: 0;
+}
+
+.rent{
+    font-size: 30px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: rgb(239, 239, 236);
+    background-color: rgb(10, 95, 112);
+    cursor: pointer;
+    border:none;
+}
+
+.rent:hover{
+    background-color: rgb(13, 224, 217);    color: azure;
+    transition-duration: 0.5s;
+    
+}
+
+.secondary-container img{
+    width:50px;
+    height:50px;
+}
+
+h2{
+    letter-spacing: 2px;
+}
+
+.actors{
+    display:inline;
+    clear: none;
+}
+
+.trailer{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.4s;
+}
+
+.trailer h2{
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+
+
+
+.trailer video{
+    position: relative;
+  max-width: 900px;
+  outline: none;
+}
+
+.active.trailer{
+    visibility: hidden;
+    opacity: 0;
+}
+
+@media (max-width:750px) {
+    .main-container{
+        flex-wrap: wrap;
+    }
+
+    .trailer video{
+        width:500px;
+    }
+}
+
+@media (max-width: 991px) {
+    .trailer video {
+      max-width: 90%;
+    }
+  }
+
+
+.exit{
+    position: absolute;
+    top: 80px;
+    right: 80px;
+    color: white;
+    cursor: pointer;
+}
+
+.watch-trailer{
+    font-size: 30px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: rgb(239, 239, 236);
+    background-color: rgb(10, 95, 112);
+    cursor: pointer;
+    border:none;
+}
+
+.watch-trailer:hover{
+    background-color: rgb(13, 224, 217);
+    color: azure;
+    transition-duration: 0.5s;
+    
+}
+
+.label,.cirle{
+    display: none;
+}

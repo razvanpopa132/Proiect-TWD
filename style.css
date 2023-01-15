@@ -1,0 +1,313 @@
+body{
+    
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: .4s;
+}
+
+
+label{
+    color: aliceblue;
+}
+
+
+.navbar{
+    display: flex;
+    margin:0;
+    width:100%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    position:fixed;
+    background-color: #0384a1;
+    height:50px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    z-index: 1;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: rgb(249, 249, 249);
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.dropdown label , select{
+    color: rgb(255, 255, 255);
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.dropdown select{
+    font-size: 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: rgb(2, 1, 1);
+}
+
+.search{
+    margin-left: 5px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.search button{
+    margin: -6px;
+    font-size:20px;
+    border-radius: 10px;
+    
+}
+
+.search input{
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.navbar a:hover{
+    color: rgb(2, 38, 42);
+    transition-duration: 0.3s;
+}
+
+.dropdown label:hover{
+    color: rgb(0, 0, 0);
+    transition-duration: 0.3s;
+}
+
+.categories{
+    position: absolute;
+    margin-top: 140px;   
+    overflow: hidden; 
+    z-index: 0;
+    
+}
+
+.categories div::-webkit-scrollbar{
+    display: none;
+}
+
+.categories div{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    border-bottom: 5px solid rgb(3, 53, 85);
+    scroll-behavior: smooth;
+    max-width: 201vh;
+    
+}
+
+.categories div a{
+    
+    margin:30px;
+    text-decoration: none;
+    color: white;
+    max-width: 150px;
+    
+    
+}
+
+
+
+.categories div a:hover{
+    opacity: 0.8;
+    transition-duration: 0.3s;
+
+}
+
+
+.categories div a img{
+  width:150px;
+  height:200px; 
+  border-radius: 10px; 
+}
+
+
+
+.categories div a h3{
+    text-align: center;
+}
+
+
+.categories h2{
+    color: white;
+    margin:10px;
+}
+
+
+body h1{
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 10px;
+    color: white;
+}
+
+.main-container p img{
+    height: 50px;
+    width:50px;
+}
+
+@media (max-width:650px) {
+    .dropdown{
+        display: none;
+    }
+
+    .label,.cirle{
+        display: none;
+    }
+}
+
+@media (max-width:1300px) {
+    .prv-btn-horror,.nxt-btn-horror{
+        visibility: hidden;
+    }
+
+    .prv-btn-action,.nxt-btn-action{
+        visibility: hidden;
+    }
+
+    .prv-btn-thriller,.nxt-btn-thriller{
+        visibility: hidden;
+    }
+
+    .categories div{
+        flex-wrap: wrap;
+    }
+}
+
+
+.prv-btn-horror,.nxt-btn-horror{
+    background-color: rgb(119, 117, 117);
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    margin-top:120px;
+    z-index: 9;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+.prv-btn-horror{
+    margin-left: 5px;
+}
+
+.nxt-btn-horror{
+    right:0;
+    margin-right: 5px;
+}
+
+.prv-btn-action,.nxt-btn-action{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    margin-top:520px;
+    z-index: 9;
+    background-color: rgb(119, 117, 117);
+    border-radius: 5px;
+}
+
+.nxt-btn-action{
+    right:0;
+    margin-right:5px;
+}
+
+.prv-btn-action{
+    margin-left: 5px;
+}
+
+.prv-btn-thriller,.nxt-btn-thriller{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    margin-top:920px;
+    z-index: 9;
+    background-color: rgb(119, 117, 117);
+    border-radius: 5px;
+}
+
+.nxt-btn-thriller{
+    right:0;
+    margin-right:5px;
+}
+
+.prv-btn-thriller{
+    margin-left: 5px;
+}
+
+.input{
+    visibility: hidden;
+}
+
+.label{
+    margin-top: 10px;
+    width:50px;
+    height:30px;
+    background-color: lightgray;
+    border-radius: 20px;
+
+}
+
+
+.circle{
+    width:30px;
+    background-color: white;
+    height:30px;
+    border-radius: 50%;
+    cursor: pointer;
+    animation: toggleOff .2s linear forwards;  
+}
+
+.input:checked+.label{
+    background-color: rgb(180, 170, 170);
+}
+
+.input:checked + .label .circle{
+    animation: toggleOn .2s linear forwards;
+    background-color: rgb(2, 14, 18);
+}
+
+
+
+@keyframes toggleOn {
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(20px);
+    }
+    
+}
+
+@keyframes toggleOff {
+    0%{
+        transform: translateX(20px);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+    
+}
+
